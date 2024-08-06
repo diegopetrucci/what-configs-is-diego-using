@@ -4,7 +4,9 @@ This is a repo to host a few of the configurations I use in my macOS installatio
 
 ## Homebrew
 
-I use `brew leaves > my_brews.txt` to generate a list of my homebrew packages. You can find them [here](configs/my_brews.txt). Then, on a new machine, I grab that and run `xargs brew install < my_brews.txt` to install them.
+I use `brew leaves --installed-on-request > my_brews.txt` to generate a list of my homebrew packages — `--installed-on-request` only shows the top-level ones, omitting their dependencies. You can find them [here](configs/my_brews.txt).
+
+Then, on a new machine, I grab that and run `xargs brew install < my_brews.txt` to install them.
 
 ## ZSH
 

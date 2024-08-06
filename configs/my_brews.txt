@@ -1,0 +1,12 @@
+bash
+ffmpeg
+folderify
+gh
+pipx
+pre-commit
+speedtest-cli
+tilt
+yt-dlp
+zsh-autosuggestions
+zsh-history-substring-search
+zsh-syntax-highlighting
