@@ -1,0 +1,7 @@
+bruno
+google-cloud-sdk
+iterm2
+jordanbaird-ice
+peripheryapp/periphery/periphery
+raycast
+th-ch/youtube-music/youtube-music

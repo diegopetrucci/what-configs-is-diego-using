@@ -2,6 +2,7 @@ bash
 ffmpeg
 folderify
 gh
+jq
 pipx
 pre-commit
 speedtest-cli
