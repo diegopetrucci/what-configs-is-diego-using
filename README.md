@@ -10,3 +10,10 @@ This is a repo to host a few of the configurations I use in my macOS installatio
 ## ZSH
 
 I like ZSH + oh my zsh, mostly because I'm used to it. I install it [while I set up my terminal](https://github.com/diegopetrucci/what-terminal-is-diego-using). My `.zshrc` config file is [here](configs/.zshrc).
+
+## Mac App Store apps
+
+Apps from the Mac App Store can be managed from the command line / config too:
+
+* `mas list | awk '{print $1 "  " $2}' > mas.txt` to generate a file containing their ids and name
+* `cat mas.txt | awk '{print $1}' | xargs -n1 mas install` to install them

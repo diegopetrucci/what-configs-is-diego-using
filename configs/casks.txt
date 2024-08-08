@@ -1,7 +1,16 @@
+alt-tab
+anki
 bruno
+cleanshot
+fantastical
 google-cloud-sdk
+istat-menus
 iterm2
 jordanbaird-ice
+karabiner-elements
+notion
+notion-calendar
 peripheryapp/periphery/periphery
 raycast
+signal
 th-ch/youtube-music/youtube-music
