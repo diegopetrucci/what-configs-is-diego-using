@@ -121,6 +121,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Free up space in Xcode by deleting derived data, archives, and simulators
+alias xcodefreespace="sudo rm -rf /.DocumentRevisions-V100/
+rm -rf ~/Library/Developer/Xcode/DerivedData
+rm -rf ~/Library/Developer/Xcode/Archives 
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/ipadOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/watchOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/tvOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/visionOS\ DeviceSupport
+rm -rf ~/Library/Caches/com.apple.dt.Xcode
+xcrun simctl delete unavailable"
+
+# Open the current directory in Finder
+alias of="open ."
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
