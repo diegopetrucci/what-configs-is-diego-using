@@ -88,6 +88,8 @@ plugins=(
   you-should-use
   copypath
   copyfile
+  copybuffer
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
