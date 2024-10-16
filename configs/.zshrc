@@ -88,6 +88,8 @@ plugins=(
   you-should-use
   copypath
   copyfile
+  copybuffer
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,17 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Custom aliases
 
 # Free up space in Xcode by deleting derived data, archives, and simulators
 alias xcodefreespace="sudo rm -rf /.DocumentRevisions-V100/
@@ -136,9 +128,26 @@ xcrun simctl delete unavailable"
 # Open the current directory in Finder
 alias of="open ."
 
+# Show all files (including hidden)
+alias lsa="ls -a"
+
+# Git
+
+# Show git status in short format
+alias gstt="git status -s"
+# Create a new branch and switch to it
+alias gcb="git checkout -b"
+# Add all files, commit with a message
+alias gac="git add . && git commit -m"
+# Commit with a message
+alias gcm="git commit -m"
+# Amend the last commit without changing the message
+alias gcane="git commit --amend --no-edit"
+# Unstage all files
+alias grhead="git reset HEAD"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 # Created by `pipx` on 2024-07-03 11:13:30
 export PATH="$PATH:/Users/diegopetrucci/.local/bin"
