@@ -72,6 +72,9 @@ xcrun simctl delete unavailable"
 # Open the current directory in Finder
 alias of="open ."
 
+# List all files in the current directory, including hidden files
+alias lsa="ls -a"
+
 # Git aliases
 
 # Create a new branch and switch to it with the given name
