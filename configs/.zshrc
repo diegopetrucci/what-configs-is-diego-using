@@ -72,6 +72,14 @@ xcrun simctl delete unavailable"
 # Open the current directory in Finder
 alias of="open ."
 
+# Git aliases
+
+# Create a new branch and switch to it with the given name
+alias gcb="git checkout -b"
+
+# Add all changes and commit them with the given message
+alias gac="git add . && git commit -m"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
