@@ -91,6 +91,8 @@ alias gcane="git commit --amend --no-edit"
 alias grhead="git reset HEAD"
 # Pull with rebase
 alias gpr="git pull --rebase"
+# Git log, one line per commit
+alias glol="git log --oneline"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
