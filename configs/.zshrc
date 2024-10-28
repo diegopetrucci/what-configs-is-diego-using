@@ -89,6 +89,8 @@ alias gcm="git commit -m"
 alias gcane="git commit --amend --no-edit"
 # Unstage all files
 alias grhead="git reset HEAD"
+# Pull with rebase
+alias gpr="git pull --rebase"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
