@@ -72,9 +72,6 @@ xcrun simctl delete unavailable"
 # Open the current directory in Finder
 alias of="open ."
 
-# Show all files (including hidden)
-alias lsa="ls -a"
-
 # Git
 
 # Show git status in short format
@@ -91,6 +88,8 @@ alias gcane="git commit --amend --no-edit"
 alias grhead="git reset HEAD"
 # Pull with rebase
 alias gpr="git pull --rebase"
+# Pull main with rebase
+alias gprom="git pull --rebase origin main"
 # Git log, one line per commit
 alias glol="git log --oneline"
 
