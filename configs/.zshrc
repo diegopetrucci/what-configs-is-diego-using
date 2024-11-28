@@ -67,7 +67,6 @@ rm -rf ~/Library/Caches/com.apple.dt.Xcode
 xcrun simctl delete unavailable"
 
 # Open the current directory in Finder
-# Open finder in the current directory
 alias of="open ."
 # List all files in the current directory, including hidden files
 alias lsa="ls -a"
