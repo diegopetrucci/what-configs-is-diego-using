@@ -74,6 +74,8 @@ alias of="open ."
 alias lsa="ls -a"
 # List all files in the current directory, including hidden files, one per line (compact)
 alias lsao="ls -1a"
+# Folder where the iCloud Drive files are located
+alias icloud-drive="~/Library/Mobile\ Documents"
 
 # Git
 
