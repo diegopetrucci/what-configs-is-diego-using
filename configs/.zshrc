@@ -27,18 +27,20 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Plugins
 
 plugins=(
+  autoupdate
+  copybuffer
+  copyfile
+  copypath
+  diff-so-fancy
   git
-  zsh-syntax-highlighting
+  macos
+  sudo
+  web-search
+  you-should-use
+  z
   zsh-autosuggestions
   zsh-history-substring-search
-  z
-  sudo
-  macos
-  you-should-use
-  copypath
-  copyfile
-  copybuffer
-  web-search
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,6 +95,8 @@ alias gpr="git pull --rebase"
 alias gprom="git pull --rebase origin main"
 # Git log, one line per commit
 alias glol="git log --oneline"
+# Fetch remote branches, pruning local ones, and list them
+alias gfr="git fetch --all --prune && git branch -r"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
