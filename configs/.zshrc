@@ -83,6 +83,7 @@ alias icloud-drive="~/Library/Mobile\ Documents"
 alias gstt="git status -s"
 # Create a new branch and switch to it
 alias gcb="git checkout -b"
+alias gcob="git checkout -b"
 # Add all files, commit with a message
 alias gac="git add . && git commit -m"
 # Commit with a message
