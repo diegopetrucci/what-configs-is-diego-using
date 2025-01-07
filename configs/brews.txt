@@ -2,10 +2,8 @@ bash
 ffmpeg
 folderify
 gh
-jq
 mas
 ollama
-pipx
 pre-commit
 speedtest-cli
 tilt
