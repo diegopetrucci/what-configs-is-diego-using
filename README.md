@@ -2,6 +2,10 @@
 
 This is a repo to host a few of the configurations I use in my macOS installations.
 
+## Quick install
+
+Running `sh install.sh` will, slowly but inesorably, go through all the steps mentioned below and try to set up everything in one go. Some things might fail.
+
 ## Homebrew
 
 * `brew leaves --installed-on-request > brews.txt` generates a list of my homebrew packages — `--installed-on-request` only shows the top-level ones, omitting their dependencies. You can find them [here](configs/my_brews.txt). Then, on a new machine, I grab that and run `xargs brew install < brews.txt` to install them

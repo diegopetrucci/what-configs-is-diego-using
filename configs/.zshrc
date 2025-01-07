@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -17,12 +14,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -30,18 +27,20 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Plugins
 
 plugins=(
+  autoupdate
+  copybuffer
+  copyfile
+  copypath
+  diff-so-fancy
   git
-  zsh-syntax-highlighting
+  macos
+  sudo
+  web-search
+  you-should-use
+  z
   zsh-autosuggestions
   zsh-history-substring-search
-  z
-  sudo
-  macos
-  you-should-use
-  copypath
-  copyfile
-  copybuffer
-  web-search
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -49,11 +48,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='code -w'
+fi
 
 # Custom aliases
 
@@ -71,36 +70,36 @@ xcrun simctl delete unavailable"
 
 # Open the current directory in Finder
 alias of="open ."
+# List all files in the current directory, including hidden files
+alias lsa="ls -a"
+# List all files in the current directory, including hidden files, one per line (compact)
+alias lsao="ls -1a"
+# Folder where the iCloud Drive files are located
+alias icloud-drive="~/Library/Mobile\ Documents"
 
-# Git aliases
+# Git
 
-# Create a new branch and switch to it with the given name
+# Show git status in short format
+alias gstt="git status -s"
+# Create a new branch and switch to it
 alias gcb="git checkout -b"
-
-# Add all changes and commit them with the given message
+alias gcob="git checkout -b"
+# Add all files, commit with a message
 alias gac="git add . && git commit -m"
+# Commit with a message
+alias gcm="git commit -m"
+# Amend the last commit without changing the message
+alias gcane="git commit --amend --no-edit"
+# Unstage all files
+alias grhead="git reset HEAD"
+# Pull with rebase
+alias gpr="git pull --rebase"
+# Pull main with rebase
+alias gprom="git pull --rebase origin main"
+# Git log, one line per commit
+alias glol="git log --oneline"
+# Fetch remote branches, pruning local ones, and list them
+alias gfr="git fetch --all --prune && git branch -r"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Pyenv configuration for zsh
-# https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# Pyenv virtualenv configuration for zsh
-eval "$(pyenv virtualenv-init -)"
-# Created by `pipx` on 2024-07-03 11:13:30
-export PATH="$PATH:/Users/diegopetrucci/.local/bin"
-
-# Poetry
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/diegopetrucci/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/diegopetrucci/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/diegopetrucci/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/diegopetrucci/google-cloud-sdk/completion.zsh.inc'; fi
-#source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
