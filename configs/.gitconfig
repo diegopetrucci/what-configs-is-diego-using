@@ -1,0 +1,11 @@
+[user]
+	name = Diego Petrucci
+	email = [REDACTED]
+[gitbutler]
+	signCommits = true
+[core]
+	editor = code --wait
+[push]
+	autoSetupRemote = true
+[alias]
+	conf = config --global --edit
