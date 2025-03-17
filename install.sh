@@ -77,6 +77,6 @@ done
 
 # mas apps
 echo
-echo "#6: Pulling mas package manager & apps"
+echo "#6: Pulling mac apps via the mas package manager"
 
 cat configs/mas.txt | awk '{print $1}' | xargs -n1 mas install
