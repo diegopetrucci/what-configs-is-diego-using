@@ -100,14 +100,8 @@ alias gprom="git pull --rebase origin main"
 alias glol="git log --oneline"
 # Fetch remote branches, pruning local ones, and list them
 alias gfr="git fetch --all --prune && git branch -r"
-
-# Git aliases
-
-# Create a new branch and switch to it with the given name
-alias gcb="git checkout -b"
-
-# Add all changes and commit them with the given message
-alias gac="git add . && git commit -m"
+# Switch to a branch
+alias gs="git switch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
