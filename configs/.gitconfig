@@ -1,11 +1,27 @@
 [user]
 	name = Diego Petrucci
 	email = [REDACTED]
-[gitbutler]
-	signCommits = true
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+[init]
+    defaultBranch = main
 [core]
 	editor = code --wait
 [push]
+	default = simple
 	autoSetupRemote = true
+	followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
 [alias]
 	conf = config --global --edit
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+[gitbutler]
+	signCommits = true
