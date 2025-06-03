@@ -4,7 +4,7 @@ This is a repo to host a few of the configurations I use in my macOS installatio
 
 ## Terminal
 
-I use [Ghostty]() as my terminal of choice (`brew install --cask ghostty`), [configured as such](/configs/ghostty).
+I use [Ghostty](https://ghostty.org/download) as my terminal of choice (`brew install --cask ghostty`), [configured as such](/configs/ghostty).
 
 ## Homebrew
 
