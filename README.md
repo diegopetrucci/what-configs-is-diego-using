@@ -2,6 +2,10 @@
 
 This is a repo to host a few of the configurations I use in my macOS installations.
 
+## Terminal
+
+I use [Ghostty]() as my terminal of choice (`brew install --cask ghostty`), [configured as such](/configs/ghostty).
+
 ## Homebrew
 
 * `brew leaves --installed-on-request > brews.txt` generates a list of my homebrew packages — `--installed-on-request` only shows the top-level ones, omitting their dependencies. You can find them [here](configs/my_brews.txt). Then, on a new machine, I grab that and run `xargs brew install < brews.txt` to install them
@@ -9,7 +13,7 @@ This is a repo to host a few of the configurations I use in my macOS installatio
 
 ## ZSH
 
-I like ZSH + oh my zsh, mostly because I'm used to it. I install it [while I set up my terminal](https://github.com/diegopetrucci/what-terminal-is-diego-using). My `.zshrc` config file is [here](configs/.zshrc).
+I like ZSH + oh my zsh, mostly because I'm used to it. My `.zshrc` config file is [here](configs/.zshrc).
 
 ## Mac App Store apps
 
