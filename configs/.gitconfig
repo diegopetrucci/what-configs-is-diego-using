@@ -1,6 +1,6 @@
 [user]
-	name = Diego Petrucci
-	email = [REDACTED]
+    name = Diego Petrucci
+    email = [REDACTED]
 [branch]
     sort = -committerdate
 [tag]
@@ -8,20 +8,20 @@
 [init]
     defaultBranch = main
 [core]
-	editor = code --wait
+    editor = code --wait
 [push]
-	default = simple
-	autoSetupRemote = true
-	followTags = true
+    default = simple
+    autoSetupRemote = true
+    followTags = true
 [fetch]
     prune = true
     pruneTags = true
     all = true
 [alias]
-	conf = config --global --edit
+    conf = config --global --edit
 [rebase]
     autoSquash = true
     autoStash = true
     updateRefs = true
 [gitbutler]
-	signCommits = true
+    signCommits = true
