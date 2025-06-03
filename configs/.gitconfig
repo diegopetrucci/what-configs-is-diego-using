@@ -25,3 +25,4 @@
     updateRefs = true
 [gitbutler]
     signCommits = true
+
