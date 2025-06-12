@@ -27,18 +27,23 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Plugins
 
 plugins=(
+  auto-notify
   autoupdate
   copybuffer
   copyfile
   copypath
   diff-so-fancy
   git
+  git-auto-fetch
+  git-extras
+  git-open
   macos
   sudo
   web-search
   you-should-use
   z
   zsh-autosuggestions
+  zsh-completions
   zsh-history-substring-search
   zsh-syntax-highlighting
 )
@@ -100,8 +105,8 @@ alias gprom="git pull --rebase origin main"
 alias glol="git log --oneline"
 # Fetch remote branches, pruning local ones, and list them
 alias gfr="git fetch --all --prune && git branch -r"
-# Switch to a branch
-alias gs="git switch"
+# Run Claude Code in full automatic mode
+alias claude-yolo="claude --dangerously-skip-permissions"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
