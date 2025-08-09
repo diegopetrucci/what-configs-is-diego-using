@@ -3,6 +3,8 @@
     email = [REDACTED]
 [branch]
     sort = -committerdate
+[diff]
+	algorithm = histogram
 [tag]
     sort = version:refname
 [init]
