@@ -19,7 +19,6 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -50,6 +49,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+ZSHZ_CASE=ignore
+
 # User configuration
 
 # Preferred editor for local and remote sessions
@@ -61,34 +62,19 @@ fi
 
 # Custom aliases
 
-# Free up space in Xcode by deleting derived data, archives, and simulators
-alias xcodefreespace="sudo rm -rf /.DocumentRevisions-V100/
-rm -rf ~/Library/Developer/Xcode/DerivedData
-rm -rf ~/Library/Developer/Xcode/Archives 
-rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport
-rm -rf ~/Library/Developer/Xcode/ipadOS\ DeviceSupport
-rm -rf ~/Library/Developer/Xcode/watchOS\ DeviceSupport
-rm -rf ~/Library/Developer/Xcode/tvOS\ DeviceSupport
-rm -rf ~/Library/Developer/Xcode/visionOS\ DeviceSupport
-rm -rf ~/Library/Caches/com.apple.dt.Xcode
-xcrun simctl delete unavailable"
+# General
 
 # Open the current directory in Finder
 alias of="open ."
-# List all files in the current directory, including hidden files
-alias lsa="ls -a"
-# List all files in the current directory, including hidden files, one per line (compact)
-alias lsao="ls -1a"
-# Folder where the iCloud Drive files are located
-alias icloud-drive="~/Library/Mobile\ Documents"
+# List all files in the current directory, one per line
+alias lsao="ls -a1"
+# List all user-defined aliases
+alias aliases="grep "^alias" ~/.zshrc"
 
 # Git
 
 # Show git status in short format
 alias gstt="git status -s"
-# Create a new branch and switch to it
-alias gcb="git checkout -b"
-alias gcob="git checkout -b"
 # Add all files, commit with a message
 alias gac="git add . && git commit -m"
 # Commit with a message
@@ -105,8 +91,34 @@ alias gprom="git pull --rebase origin main"
 alias glol="git log --oneline"
 # Fetch remote branches, pruning local ones, and list them
 alias gfr="git fetch --all --prune && git branch -r"
+# Create a new branch and switch to it
+alias gbs="git checkout -b"
+
+# AI agents
+
 # Run Claude Code in full automatic mode
 alias claude-yolo="claude --dangerously-skip-permissions"
+# Run Codex in full automatic mode
+alias codex-yolo="codex --approval-mode full-auto"
+# Run Gemini in full automatic mode
+alias gemini-yolo="gemini --yolo"
+
+# Xcode
+
+# Free up space in Xcode by deleting derived data, archives, and simulators
+alias xcodefreespace="sudo rm -rf /.DocumentRevisions-V100/
+rm -rf ~/Library/Developer/Xcode/DerivedData
+rm -rf ~/Library/Developer/Xcode/Archives 
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/ipadOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/watchOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/tvOS\ DeviceSupport
+rm -rf ~/Library/Developer/Xcode/visionOS\ DeviceSupport
+rm -rf ~/Library/Caches/com.apple.dt.Xcode
+xcrun simctl delete unavailable"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Homebrew
+export HOMEBREW_AUTO_UPDATE_SECS=86400
